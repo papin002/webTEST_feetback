@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mystyle.css">
+  <title>เว็บรับคำวิจารณ์</title>
+</head>
+<body>
+
+
+  <main>
+    <form id="reviewForm">
+      <input type="text" id="name" placeholder="ชื่อของคุณ" required>
+      <input id="message" placeholder="เขียนคำวิจารณ์ที่นี่..." required></textarea>
+      <button type="submit">ส่งคำวิจารณ์</button>
+    </form>
+
+    <div class="review-list" id="reviewList"></div>
+  </main>
+
+  <script>
+    const form = document.getElementById('reviewForm');
+    const reviewList = document.getElementById('reviewList');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && message) {
+        const review = document.createElement('div');
+        review.classList.add('review');
+        review.innerHTML = `<h3>${name}</h3><p>${message}</p>`;
+        reviewList.prepend(review);
+
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
