@@ -1,0 +1,36 @@
+/* สีพื้นหลังของทั้งหน้า */
+body {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* ฟ้าอมม่วงพาสเทล */
+  min-height: 100vh; /* ให้ครอบทั้งหน้าจอ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* กล่อง card */
+#card {
+  background-color: #ffffff;       /* พื้นหลังขาวสะอาด */
+  border-radius: 15px;             /* มุมโค้งมน */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* เงานุ่มๆ */
+  padding: 20px;
+}
+
+/* ปุ่ม */
+.btn-primary {
+  background-color: #4a6cf7; /* น้ำเงินเข้ม */
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #3552c3; /* สีเข้มขึ้นเล็กน้อยตอน hover */
+}
+
+/* ปรับขนาดข้อความเล็กน้อย */
+h3 {
+  color: #333;
+}
+
+label {
+  font-weight: 500;
+}
